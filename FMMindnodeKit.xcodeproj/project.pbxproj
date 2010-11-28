@@ -1,0 +1,333 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8DC2EF530486A6940098B216 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C1666FE841158C02AAC07 /* InfoPlist.strings */; };
+		8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
+		BB26C8FB129FF48B00422565 /* FMMindnodeAssociation.h in Headers */ = {isa = PBXBuildFile; fileRef = BB26C8F1129FF48B00422565 /* FMMindnodeAssociation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BB26C8FC129FF48B00422565 /* FMMindnodeAssociation.m in Sources */ = {isa = PBXBuildFile; fileRef = BB26C8F2129FF48B00422565 /* FMMindnodeAssociation.m */; };
+		BB26C8FD129FF48B00422565 /* FMMindnodeDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = BB26C8F3129FF48B00422565 /* FMMindnodeDocument.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BB26C8FE129FF48B00422565 /* FMMindnodeDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = BB26C8F4129FF48B00422565 /* FMMindnodeDocument.m */; };
+		BB26C8FF129FF48B00422565 /* FMMindnodeMindmap.h in Headers */ = {isa = PBXBuildFile; fileRef = BB26C8F5129FF48B00422565 /* FMMindnodeMindmap.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BB26C900129FF48B00422565 /* FMMindnodeMindmap.m in Sources */ = {isa = PBXBuildFile; fileRef = BB26C8F6129FF48B00422565 /* FMMindnodeMindmap.m */; };
+		BB26C901129FF48B00422565 /* FMMindnodeNode.h in Headers */ = {isa = PBXBuildFile; fileRef = BB26C8F7129FF48B00422565 /* FMMindnodeNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BB26C902129FF48B00422565 /* FMMindnodeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = BB26C8F8129FF48B00422565 /* FMMindnodeNode.m */; };
+		BB26C903129FF48B00422565 /* FMMindnodeTitle.h in Headers */ = {isa = PBXBuildFile; fileRef = BB26C8F9129FF48B00422565 /* FMMindnodeTitle.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BB26C904129FF48B00422565 /* FMMindnodeTitle.m in Sources */ = {isa = PBXBuildFile; fileRef = BB26C8FA129FF48B00422565 /* FMMindnodeTitle.m */; };
+		BB26C912129FF50C00422565 /* FMMindnodeKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BB26C911129FF50C00422565 /* FMMindnodeKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0867D69BFE84028FC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		0867D6A5FE840307C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		089C1667FE841158C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		32DBCF5E0370ADEE00C91783 /* FMMindnodeKit_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMMindnodeKit_Prefix.pch; sourceTree = "<group>"; };
+		8DC2EF5A0486A6940098B216 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8DC2EF5B0486A6940098B216 /* FMMindnodeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FMMindnodeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB26C8F1129FF48B00422565 /* FMMindnodeAssociation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMMindnodeAssociation.h; sourceTree = "<group>"; };
+		BB26C8F2129FF48B00422565 /* FMMindnodeAssociation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMMindnodeAssociation.m; sourceTree = "<group>"; };
+		BB26C8F3129FF48B00422565 /* FMMindnodeDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMMindnodeDocument.h; sourceTree = "<group>"; };
+		BB26C8F4129FF48B00422565 /* FMMindnodeDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMMindnodeDocument.m; sourceTree = "<group>"; };
+		BB26C8F5129FF48B00422565 /* FMMindnodeMindmap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMMindnodeMindmap.h; sourceTree = "<group>"; };
+		BB26C8F6129FF48B00422565 /* FMMindnodeMindmap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMMindnodeMindmap.m; sourceTree = "<group>"; };
+		BB26C8F7129FF48B00422565 /* FMMindnodeNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMMindnodeNode.h; sourceTree = "<group>"; };
+		BB26C8F8129FF48B00422565 /* FMMindnodeNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMMindnodeNode.m; sourceTree = "<group>"; };
+		BB26C8F9129FF48B00422565 /* FMMindnodeTitle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMMindnodeTitle.h; sourceTree = "<group>"; };
+		BB26C8FA129FF48B00422565 /* FMMindnodeTitle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMMindnodeTitle.m; sourceTree = "<group>"; };
+		BB26C911129FF50C00422565 /* FMMindnodeKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMMindnodeKit.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8DC2EF560486A6940098B216 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		034768DFFF38A50411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8DC2EF5B0486A6940098B216 /* FMMindnodeKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0867D691FE84028FC02AAC07 /* FMMindnodeFramework */ = {
+			isa = PBXGroup;
+			children = (
+				08FB77AEFE84172EC02AAC07 /* Classes */,
+				32C88DFF0371C24200C91783 /* Other Sources */,
+				089C1665FE841158C02AAC07 /* Resources */,
+				0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */,
+				034768DFFF38A50411DB9C8B /* Products */,
+			);
+			name = FMMindnodeFramework;
+			sourceTree = "<group>";
+		};
+		0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7B0FEA5585E11CA2CBB /* Linked Frameworks */,
+				1058C7B2FEA5585E11CA2CBB /* Other Frameworks */,
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		089C1665FE841158C02AAC07 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8DC2EF5A0486A6940098B216 /* Info.plist */,
+				089C1666FE841158C02AAC07 /* InfoPlist.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		08FB77AEFE84172EC02AAC07 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				BB26C8F1129FF48B00422565 /* FMMindnodeAssociation.h */,
+				BB26C8F2129FF48B00422565 /* FMMindnodeAssociation.m */,
+				BB26C8F3129FF48B00422565 /* FMMindnodeDocument.h */,
+				BB26C8F4129FF48B00422565 /* FMMindnodeDocument.m */,
+				BB26C8F5129FF48B00422565 /* FMMindnodeMindmap.h */,
+				BB26C8F6129FF48B00422565 /* FMMindnodeMindmap.m */,
+				BB26C8F7129FF48B00422565 /* FMMindnodeNode.h */,
+				BB26C8F8129FF48B00422565 /* FMMindnodeNode.m */,
+				BB26C8F9129FF48B00422565 /* FMMindnodeTitle.h */,
+				BB26C8FA129FF48B00422565 /* FMMindnodeTitle.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7B0FEA5585E11CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7B2FEA5585E11CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0867D6A5FE840307C02AAC07 /* AppKit.framework */,
+				0867D69BFE84028FC02AAC07 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		32C88DFF0371C24200C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32DBCF5E0370ADEE00C91783 /* FMMindnodeKit_Prefix.pch */,
+				BB26C911129FF50C00422565 /* FMMindnodeKit.h */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		8DC2EF500486A6940098B216 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB26C8FB129FF48B00422565 /* FMMindnodeAssociation.h in Headers */,
+				BB26C8FD129FF48B00422565 /* FMMindnodeDocument.h in Headers */,
+				BB26C8FF129FF48B00422565 /* FMMindnodeMindmap.h in Headers */,
+				BB26C901129FF48B00422565 /* FMMindnodeNode.h in Headers */,
+				BB26C903129FF48B00422565 /* FMMindnodeTitle.h in Headers */,
+				BB26C912129FF50C00422565 /* FMMindnodeKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		8DC2EF4F0486A6940098B216 /* FMMindnodeKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB91AD08733DA50010E9CD /* Build configuration list for PBXNativeTarget "FMMindnodeKit" */;
+			buildPhases = (
+				8DC2EF500486A6940098B216 /* Headers */,
+				8DC2EF520486A6940098B216 /* Resources */,
+				8DC2EF540486A6940098B216 /* Sources */,
+				8DC2EF560486A6940098B216 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FMMindnodeKit;
+			productInstallPath = "$(HOME)/Library/Frameworks";
+			productName = FMMindnodeFramework;
+			productReference = 8DC2EF5B0486A6940098B216 /* FMMindnodeKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0867D690FE84028FC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = NO;
+				ORGANIZATIONNAME = "Felix Morgner";
+			};
+			buildConfigurationList = 1DEB91B108733DA50010E9CD /* Build configuration list for PBXProject "FMMindnodeKit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 0867D691FE84028FC02AAC07 /* FMMindnodeFramework */;
+			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8DC2EF4F0486A6940098B216 /* FMMindnodeKit */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8DC2EF520486A6940098B216 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DC2EF530486A6940098B216 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8DC2EF540486A6940098B216 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB26C8FC129FF48B00422565 /* FMMindnodeAssociation.m in Sources */,
+				BB26C8FE129FF48B00422565 /* FMMindnodeDocument.m in Sources */,
+				BB26C900129FF48B00422565 /* FMMindnodeMindmap.m in Sources */,
+				BB26C902129FF48B00422565 /* FMMindnodeNode.m in Sources */,
+				BB26C904129FF48B00422565 /* FMMindnodeTitle.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C1666FE841158C02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C1667FE841158C02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB91AE08733DA50010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = FMMindnodeKit_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/Frameworks";
+				PRODUCT_NAME = FMMindnodeKit;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		1DEB91AF08733DA50010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = FMMindnodeKit_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/Frameworks";
+				PRODUCT_NAME = FMMindnodeKit;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+		1DEB91B208733DA50010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+			};
+			name = Debug;
+		};
+		1DEB91B308733DA50010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB91AD08733DA50010E9CD /* Build configuration list for PBXNativeTarget "FMMindnodeKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB91AE08733DA50010E9CD /* Debug */,
+				1DEB91AF08733DA50010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB91B108733DA50010E9CD /* Build configuration list for PBXProject "FMMindnodeKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB91B208733DA50010E9CD /* Debug */,
+				1DEB91B308733DA50010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
+}
