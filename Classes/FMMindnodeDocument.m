@@ -7,6 +7,7 @@
 //
 
 #import "FMMindnodeDocument.h"
+#import "NSData+zlib.h"
 
 
 @implementation FMMindnodeDocument
@@ -62,5 +63,21 @@
 	return [[[FMMindnodeDocument alloc] initWithDictionary:theDictionary] autorelease];
 	}
 
+- (id) initWithContentsOfFile:(NSString*)thePath
+	{
+	if(self = [super init])
+		{
+		NSData* zipData = [NSData dataWithContentsOfFile:thePath];
+		
+		NSData* decompressedData = [NSData dataByInflatingData:zipData];
+		
+		}
+	return self;
+	}
+
++ (id) documentWithContentsOfFile:(NSString*)thePath
+	{
+	return [[[FMMindnodeDocument alloc] initWithContentsOfFile:thePath] autorelease];
+	}
 
 @end

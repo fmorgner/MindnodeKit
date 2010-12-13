@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		8DC2EF530486A6940098B216 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C1666FE841158C02AAC07 /* InfoPlist.strings */; };
 		8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
+		BB1B346C12B665F0006B110C /* NSData+zlib.h in Headers */ = {isa = PBXBuildFile; fileRef = BB1B346A12B665F0006B110C /* NSData+zlib.h */; };
+		BB1B346D12B665F0006B110C /* NSData+zlib.m in Sources */ = {isa = PBXBuildFile; fileRef = BB1B346B12B665F0006B110C /* NSData+zlib.m */; };
+		BB1B349B12B668BA006B110C /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BB1B349A12B668BA006B110C /* libz.dylib */; };
 		BB26C8FB129FF48B00422565 /* FMMindnodeAssociation.h in Headers */ = {isa = PBXBuildFile; fileRef = BB26C8F1129FF48B00422565 /* FMMindnodeAssociation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BB26C8FC129FF48B00422565 /* FMMindnodeAssociation.m in Sources */ = {isa = PBXBuildFile; fileRef = BB26C8F2129FF48B00422565 /* FMMindnodeAssociation.m */; };
 		BB26C8FD129FF48B00422565 /* FMMindnodeDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = BB26C8F3129FF48B00422565 /* FMMindnodeDocument.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -30,6 +33,9 @@
 		32DBCF5E0370ADEE00C91783 /* FMMindnodeKit_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMMindnodeKit_Prefix.pch; sourceTree = "<group>"; };
 		8DC2EF5A0486A6940098B216 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DC2EF5B0486A6940098B216 /* FMMindnodeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FMMindnodeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB1B346A12B665F0006B110C /* NSData+zlib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+zlib.h"; sourceTree = "<group>"; };
+		BB1B346B12B665F0006B110C /* NSData+zlib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+zlib.m"; sourceTree = "<group>"; };
+		BB1B349A12B668BA006B110C /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BB26C8F1129FF48B00422565 /* FMMindnodeAssociation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMMindnodeAssociation.h; sourceTree = "<group>"; };
 		BB26C8F2129FF48B00422565 /* FMMindnodeAssociation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMMindnodeAssociation.m; sourceTree = "<group>"; };
 		BB26C8F3129FF48B00422565 /* FMMindnodeDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMMindnodeDocument.h; sourceTree = "<group>"; };
@@ -49,6 +55,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */,
+				BB1B349B12B668BA006B110C /* libz.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +78,7 @@
 				089C1665FE841158C02AAC07 /* Resources */,
 				0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */,
 				034768DFFF38A50411DB9C8B /* Products */,
+				BB1B349A12B668BA006B110C /* libz.dylib */,
 			);
 			name = FMMindnodeFramework;
 			sourceTree = "<group>";
@@ -96,6 +104,8 @@
 		08FB77AEFE84172EC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				BB1B346A12B665F0006B110C /* NSData+zlib.h */,
+				BB1B346B12B665F0006B110C /* NSData+zlib.m */,
 				BB26C8F1129FF48B00422565 /* FMMindnodeAssociation.h */,
 				BB26C8F2129FF48B00422565 /* FMMindnodeAssociation.m */,
 				BB26C8F3129FF48B00422565 /* FMMindnodeDocument.h */,
@@ -149,6 +159,7 @@
 				BB26C901129FF48B00422565 /* FMMindnodeNode.h in Headers */,
 				BB26C903129FF48B00422565 /* FMMindnodeTitle.h in Headers */,
 				BB26C912129FF50C00422565 /* FMMindnodeKit.h in Headers */,
+				BB1B346C12B665F0006B110C /* NSData+zlib.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,6 +235,7 @@
 				BB26C900129FF48B00422565 /* FMMindnodeMindmap.m in Sources */,
 				BB26C902129FF48B00422565 /* FMMindnodeNode.m in Sources */,
 				BB26C904129FF48B00422565 /* FMMindnodeTitle.m in Sources */,
+				BB1B346D12B665F0006B110C /* NSData+zlib.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
