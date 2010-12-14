@@ -30,9 +30,7 @@
 - (id) initWithDictionary:(NSDictionary*)theDictionary;
 + (id) documentWithDictionary:(NSDictionary*)theDictionary;
 
-- (id) initWithContentsOfFile:(NSString*)thePath;
-+ (id) documentWithContentsOfFile:(NSString*)thePath;
-
++ (id) documentWithContentOfFile:(NSString*)path;
 
 @property(nonatomic, retain) NSString* author;
 @property(nonatomic, retain) NSString* comments;
@@ -47,7 +45,9 @@
 
 @property(nonatomic, assign) BOOL isUsingConstrainedLayout;
 
-@property(nonatomic, assign) NSInteger version;	
+@property(nonatomic, assign) NSInteger version;
+
+@property(nonatomic, assign) id delegate; 
 
 
 @end

@@ -7,12 +7,14 @@
 //
 
 #import "FMMindnodeDocument.h"
-#import "NSData+zlib.h"
 
+#import "ZKDefs.h"
+#import "ZKDataArchive.h"
+#import "ZKCDHeader.h"
 
 @implementation FMMindnodeDocument
 
-@synthesize author, comments, keywords, title, mindMap, printInfo, windowConfig, isUsingConstrainedLayout, version;
+@synthesize author, comments, keywords, title, mindMap, printInfo, windowConfig, isUsingConstrainedLayout, version, delegate;
 
 - (id) init
 	{
@@ -63,21 +65,26 @@
 	return [[[FMMindnodeDocument alloc] initWithDictionary:theDictionary] autorelease];
 	}
 
-- (id) initWithContentsOfFile:(NSString*)thePath
++ (id) documentWithContentOfFile:(NSString*)path
 	{
-	if(self = [super init])
+	NSDictionary* xmlDictionary = nil;
+	NSError* error = nil;
+	FMMindnodeDocument* returnDocument = nil;
+	
+	ZKDataArchive* archive = [ZKDataArchive archiveWithArchivePath:path];
+	NSUInteger status = [archive inflateAll];
+
+	if(status == zkSucceeded)
 		{
-		NSData* zipData = [NSData dataWithContentsOfFile:thePath];
-		
-		NSData* decompressedData = [NSData dataByInflatingData:zipData];
-		
+		NSDictionary* fileInfo = [[archive inflatedFiles] objectAtIndex:0];
+		NSData* xmlData = [fileInfo valueForKey:@"fileData"];
+		xmlDictionary = [NSPropertyListSerialization propertyListWithData:xmlData options:0 format:NULL error:&error];
+		if(error == nil)
+			{
+			returnDocument = [FMMindnodeDocument documentWithDictionary:xmlDictionary];
+			}
 		}
-	return self;
+	
+	return returnDocument;
 	}
-
-+ (id) documentWithContentsOfFile:(NSString*)thePath
-	{
-	return [[[FMMindnodeDocument alloc] initWithContentsOfFile:thePath] autorelease];
-	}
-
 @end

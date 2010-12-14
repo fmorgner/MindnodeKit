@@ -9,9 +9,7 @@
 /* Begin PBXBuildFile section */
 		8DC2EF530486A6940098B216 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C1666FE841158C02AAC07 /* InfoPlist.strings */; };
 		8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
-		BB1B346C12B665F0006B110C /* NSData+zlib.h in Headers */ = {isa = PBXBuildFile; fileRef = BB1B346A12B665F0006B110C /* NSData+zlib.h */; };
-		BB1B346D12B665F0006B110C /* NSData+zlib.m in Sources */ = {isa = PBXBuildFile; fileRef = BB1B346B12B665F0006B110C /* NSData+zlib.m */; };
-		BB1B349B12B668BA006B110C /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BB1B349A12B668BA006B110C /* libz.dylib */; };
+		BB0DACB312B7AEDA00865E11 /* libzipkit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BB0DACB212B7AEDA00865E11 /* libzipkit.a */; };
 		BB26C8FB129FF48B00422565 /* FMMindnodeAssociation.h in Headers */ = {isa = PBXBuildFile; fileRef = BB26C8F1129FF48B00422565 /* FMMindnodeAssociation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BB26C8FC129FF48B00422565 /* FMMindnodeAssociation.m in Sources */ = {isa = PBXBuildFile; fileRef = BB26C8F2129FF48B00422565 /* FMMindnodeAssociation.m */; };
 		BB26C8FD129FF48B00422565 /* FMMindnodeDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = BB26C8F3129FF48B00422565 /* FMMindnodeDocument.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -23,6 +21,7 @@
 		BB26C903129FF48B00422565 /* FMMindnodeTitle.h in Headers */ = {isa = PBXBuildFile; fileRef = BB26C8F9129FF48B00422565 /* FMMindnodeTitle.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BB26C904129FF48B00422565 /* FMMindnodeTitle.m in Sources */ = {isa = PBXBuildFile; fileRef = BB26C8FA129FF48B00422565 /* FMMindnodeTitle.m */; };
 		BB26C912129FF50C00422565 /* FMMindnodeKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BB26C911129FF50C00422565 /* FMMindnodeKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BBAA38AD12B67C94002C1623 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BBAA38AC12B67C94002C1623 /* libz.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,9 +32,40 @@
 		32DBCF5E0370ADEE00C91783 /* FMMindnodeKit_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMMindnodeKit_Prefix.pch; sourceTree = "<group>"; };
 		8DC2EF5A0486A6940098B216 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DC2EF5B0486A6940098B216 /* FMMindnodeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FMMindnodeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BB1B346A12B665F0006B110C /* NSData+zlib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+zlib.h"; sourceTree = "<group>"; };
-		BB1B346B12B665F0006B110C /* NSData+zlib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+zlib.m"; sourceTree = "<group>"; };
-		BB1B349A12B668BA006B110C /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		BB0DACB212B7AEDA00865E11 /* libzipkit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libzipkit.a; path = "Third Party/libzipkit.a"; sourceTree = "<group>"; };
+		BB0DACB512B7AF4700865E11 /* GMAppleDouble+ZKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GMAppleDouble+ZKAdditions.h"; sourceTree = "<group>"; };
+		BB0DACB612B7AF4700865E11 /* GMAppleDouble+ZKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GMAppleDouble+ZKAdditions.m"; sourceTree = "<group>"; };
+		BB0DACB712B7AF4700865E11 /* NSData+ZKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+ZKAdditions.h"; sourceTree = "<group>"; };
+		BB0DACB812B7AF4700865E11 /* NSData+ZKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+ZKAdditions.m"; sourceTree = "<group>"; };
+		BB0DACB912B7AF4700865E11 /* NSDate+ZKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+ZKAdditions.h"; sourceTree = "<group>"; };
+		BB0DACBA12B7AF4700865E11 /* NSDate+ZKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+ZKAdditions.m"; sourceTree = "<group>"; };
+		BB0DACBB12B7AF4700865E11 /* NSDictionary+ZKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+ZKAdditions.h"; sourceTree = "<group>"; };
+		BB0DACBC12B7AF4700865E11 /* NSDictionary+ZKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+ZKAdditions.m"; sourceTree = "<group>"; };
+		BB0DACBD12B7AF4700865E11 /* NSFileHandle+ZKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileHandle+ZKAdditions.h"; sourceTree = "<group>"; };
+		BB0DACBE12B7AF4700865E11 /* NSFileHandle+ZKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileHandle+ZKAdditions.m"; sourceTree = "<group>"; };
+		BB0DACBF12B7AF4700865E11 /* NSFileManager+ZKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+ZKAdditions.h"; sourceTree = "<group>"; };
+		BB0DACC012B7AF4700865E11 /* NSFileManager+ZKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+ZKAdditions.m"; sourceTree = "<group>"; };
+		BB0DACC112B7AF4700865E11 /* NSString+ZKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ZKAdditions.h"; sourceTree = "<group>"; };
+		BB0DACC212B7AF4700865E11 /* ZKArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKArchive.h; sourceTree = "<group>"; };
+		BB0DACC312B7AF4700865E11 /* ZKArchive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKArchive.m; sourceTree = "<group>"; };
+		BB0DACC412B7AF4700865E11 /* ZKCDHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKCDHeader.h; sourceTree = "<group>"; };
+		BB0DACC512B7AF4700865E11 /* ZKCDHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKCDHeader.m; sourceTree = "<group>"; };
+		BB0DACC612B7AF4700865E11 /* ZKCDTrailer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKCDTrailer.h; sourceTree = "<group>"; };
+		BB0DACC712B7AF4700865E11 /* ZKCDTrailer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKCDTrailer.m; sourceTree = "<group>"; };
+		BB0DACC812B7AF4700865E11 /* ZKCDTrailer64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKCDTrailer64.h; sourceTree = "<group>"; };
+		BB0DACC912B7AF4700865E11 /* ZKCDTrailer64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKCDTrailer64.m; sourceTree = "<group>"; };
+		BB0DACCA12B7AF4700865E11 /* ZKCDTrailer64Locator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKCDTrailer64Locator.h; sourceTree = "<group>"; };
+		BB0DACCB12B7AF4700865E11 /* ZKCDTrailer64Locator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKCDTrailer64Locator.m; sourceTree = "<group>"; };
+		BB0DACCC12B7AF4700865E11 /* ZKDataArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKDataArchive.h; sourceTree = "<group>"; };
+		BB0DACCD12B7AF4700865E11 /* ZKDataArchive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKDataArchive.m; sourceTree = "<group>"; };
+		BB0DACCE12B7AF4700865E11 /* ZKDefs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKDefs.h; sourceTree = "<group>"; };
+		BB0DACCF12B7AF4700865E11 /* ZKDefs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKDefs.m; sourceTree = "<group>"; };
+		BB0DACD012B7AF4700865E11 /* ZKFileArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKFileArchive.h; sourceTree = "<group>"; };
+		BB0DACD112B7AF4700865E11 /* ZKFileArchive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKFileArchive.m; sourceTree = "<group>"; };
+		BB0DACD212B7AF4700865E11 /* ZKLFHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKLFHeader.h; sourceTree = "<group>"; };
+		BB0DACD312B7AF4700865E11 /* ZKLFHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKLFHeader.m; sourceTree = "<group>"; };
+		BB0DACD412B7AF4700865E11 /* ZKLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKLog.h; sourceTree = "<group>"; };
+		BB0DACD512B7AF4700865E11 /* ZKLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKLog.m; sourceTree = "<group>"; };
 		BB26C8F1129FF48B00422565 /* FMMindnodeAssociation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMMindnodeAssociation.h; sourceTree = "<group>"; };
 		BB26C8F2129FF48B00422565 /* FMMindnodeAssociation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMMindnodeAssociation.m; sourceTree = "<group>"; };
 		BB26C8F3129FF48B00422565 /* FMMindnodeDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMMindnodeDocument.h; sourceTree = "<group>"; };
@@ -47,6 +77,7 @@
 		BB26C8F9129FF48B00422565 /* FMMindnodeTitle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMMindnodeTitle.h; sourceTree = "<group>"; };
 		BB26C8FA129FF48B00422565 /* FMMindnodeTitle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMMindnodeTitle.m; sourceTree = "<group>"; };
 		BB26C911129FF50C00422565 /* FMMindnodeKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMMindnodeKit.h; sourceTree = "<group>"; };
+		BBAA38AC12B67C94002C1623 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +86,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */,
-				BB1B349B12B668BA006B110C /* libz.dylib in Frameworks */,
+				BBAA38AD12B67C94002C1623 /* libz.dylib in Frameworks */,
+				BB0DACB312B7AEDA00865E11 /* libzipkit.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,12 +105,12 @@
 		0867D691FE84028FC02AAC07 /* FMMindnodeFramework */ = {
 			isa = PBXGroup;
 			children = (
+				BB0DACB112B7AEDA00865E11 /* Third Party */,
 				08FB77AEFE84172EC02AAC07 /* Classes */,
 				32C88DFF0371C24200C91783 /* Other Sources */,
 				089C1665FE841158C02AAC07 /* Resources */,
 				0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */,
 				034768DFFF38A50411DB9C8B /* Products */,
-				BB1B349A12B668BA006B110C /* libz.dylib */,
 			);
 			name = FMMindnodeFramework;
 			sourceTree = "<group>";
@@ -104,8 +136,6 @@
 		08FB77AEFE84172EC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				BB1B346A12B665F0006B110C /* NSData+zlib.h */,
-				BB1B346B12B665F0006B110C /* NSData+zlib.m */,
 				BB26C8F1129FF48B00422565 /* FMMindnodeAssociation.h */,
 				BB26C8F2129FF48B00422565 /* FMMindnodeAssociation.m */,
 				BB26C8F3129FF48B00422565 /* FMMindnodeDocument.h */,
@@ -123,6 +153,8 @@
 		1058C7B0FEA5585E11CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BB0DACB212B7AEDA00865E11 /* libzipkit.a */,
+				BBAA38AC12B67C94002C1623 /* libz.dylib */,
 				1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */,
 			);
 			name = "Linked Frameworks";
@@ -146,6 +178,54 @@
 			name = "Other Sources";
 			sourceTree = "<group>";
 		};
+		BB0DACB112B7AEDA00865E11 /* Third Party */ = {
+			isa = PBXGroup;
+			children = (
+				BB0DACB412B7AF4700865E11 /* ZipKit Headers */,
+			);
+			path = "Third Party";
+			sourceTree = "<group>";
+		};
+		BB0DACB412B7AF4700865E11 /* ZipKit Headers */ = {
+			isa = PBXGroup;
+			children = (
+				BB0DACB512B7AF4700865E11 /* GMAppleDouble+ZKAdditions.h */,
+				BB0DACB612B7AF4700865E11 /* GMAppleDouble+ZKAdditions.m */,
+				BB0DACB712B7AF4700865E11 /* NSData+ZKAdditions.h */,
+				BB0DACB812B7AF4700865E11 /* NSData+ZKAdditions.m */,
+				BB0DACB912B7AF4700865E11 /* NSDate+ZKAdditions.h */,
+				BB0DACBA12B7AF4700865E11 /* NSDate+ZKAdditions.m */,
+				BB0DACBB12B7AF4700865E11 /* NSDictionary+ZKAdditions.h */,
+				BB0DACBC12B7AF4700865E11 /* NSDictionary+ZKAdditions.m */,
+				BB0DACBD12B7AF4700865E11 /* NSFileHandle+ZKAdditions.h */,
+				BB0DACBE12B7AF4700865E11 /* NSFileHandle+ZKAdditions.m */,
+				BB0DACBF12B7AF4700865E11 /* NSFileManager+ZKAdditions.h */,
+				BB0DACC012B7AF4700865E11 /* NSFileManager+ZKAdditions.m */,
+				BB0DACC112B7AF4700865E11 /* NSString+ZKAdditions.h */,
+				BB0DACC212B7AF4700865E11 /* ZKArchive.h */,
+				BB0DACC312B7AF4700865E11 /* ZKArchive.m */,
+				BB0DACC412B7AF4700865E11 /* ZKCDHeader.h */,
+				BB0DACC512B7AF4700865E11 /* ZKCDHeader.m */,
+				BB0DACC612B7AF4700865E11 /* ZKCDTrailer.h */,
+				BB0DACC712B7AF4700865E11 /* ZKCDTrailer.m */,
+				BB0DACC812B7AF4700865E11 /* ZKCDTrailer64.h */,
+				BB0DACC912B7AF4700865E11 /* ZKCDTrailer64.m */,
+				BB0DACCA12B7AF4700865E11 /* ZKCDTrailer64Locator.h */,
+				BB0DACCB12B7AF4700865E11 /* ZKCDTrailer64Locator.m */,
+				BB0DACCC12B7AF4700865E11 /* ZKDataArchive.h */,
+				BB0DACCD12B7AF4700865E11 /* ZKDataArchive.m */,
+				BB0DACCE12B7AF4700865E11 /* ZKDefs.h */,
+				BB0DACCF12B7AF4700865E11 /* ZKDefs.m */,
+				BB0DACD012B7AF4700865E11 /* ZKFileArchive.h */,
+				BB0DACD112B7AF4700865E11 /* ZKFileArchive.m */,
+				BB0DACD212B7AF4700865E11 /* ZKLFHeader.h */,
+				BB0DACD312B7AF4700865E11 /* ZKLFHeader.m */,
+				BB0DACD412B7AF4700865E11 /* ZKLog.h */,
+				BB0DACD512B7AF4700865E11 /* ZKLog.m */,
+			);
+			path = "ZipKit Headers";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -159,7 +239,6 @@
 				BB26C901129FF48B00422565 /* FMMindnodeNode.h in Headers */,
 				BB26C903129FF48B00422565 /* FMMindnodeTitle.h in Headers */,
 				BB26C912129FF50C00422565 /* FMMindnodeKit.h in Headers */,
-				BB1B346C12B665F0006B110C /* NSData+zlib.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,7 +314,6 @@
 				BB26C900129FF48B00422565 /* FMMindnodeMindmap.m in Sources */,
 				BB26C902129FF48B00422565 /* FMMindnodeNode.m in Sources */,
 				BB26C904129FF48B00422565 /* FMMindnodeTitle.m in Sources */,
-				BB1B346D12B665F0006B110C /* NSData+zlib.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +338,7 @@
 				COPY_PHASE_STRIP = NO;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				FRAMEWORK_VERSION = A;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
@@ -267,8 +346,22 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = FMMindnodeKit_Prefix.pch;
+				HEADER_SEARCH_PATHS = (
+					Third,
+					Party/ZipKit,
+					Headers,
+				);
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Frameworks";
+				LD_DYLIB_INSTALL_NAME = "@executable_path/../Frameworks/$(EXECUTABLE_PATH)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Third Party\"",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = FMMindnodeKit;
 				WRAPPER_EXTENSION = framework;
 			};
@@ -281,12 +374,27 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				FRAMEWORK_VERSION = A;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = FMMindnodeKit_Prefix.pch;
+				HEADER_SEARCH_PATHS = (
+					Third,
+					Party/ZipKit,
+					Headers,
+				);
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Frameworks";
+				LD_DYLIB_INSTALL_NAME = "@executable_path/../Frameworks/$(EXECUTABLE_PATH)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Third Party\"",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = FMMindnodeKit;
 				WRAPPER_EXTENSION = framework;
 			};
