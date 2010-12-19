@@ -15,7 +15,7 @@
 
 - (id) init
 	{
-	if(self = [super init])
+	if((self = [super init]))
 		{
 		self.constrainedWidth = 0;
 		self.shrinkToFitContent = 0;
@@ -27,7 +27,7 @@
 
 - (id) initWithDictionary:(NSDictionary*)theDictionary
 	{
-		if(self = [super init])
+		if((self = [super init]))
 		{
 		[self setConstrainedWidth:[[theDictionary valueForKey:@"constrainedWidth"] intValue]];
 		[self setShrinkToFitContent:[[theDictionary valueForKey:@"shrinkToFitContent"] intValue]];

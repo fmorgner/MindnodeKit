@@ -14,11 +14,11 @@
 
 @implementation FMMindnodeDocument
 
-@synthesize author, comments, keywords, title, mindMap, printInfo, windowConfig, isUsingConstrainedLayout, version, delegate;
+@synthesize author, comments, keywords, title, mindMap, printInfo, windowConfig, isUsingConstrainedLayout, version;
 
 - (id) init
 	{
-	if(self = [super init])
+	if((self = [super init]))
 		{
 		self.author = nil;
 		self.comments = nil;
@@ -40,7 +40,7 @@
 
 - (id) initWithDictionary:(NSDictionary*)theDictionary
 	{
-	if(self = [super init])
+	if((self = [super init]))
 		{
 		[self setAuthor:[theDictionary valueForKey:@"author"]];
 		[self setComments:[theDictionary valueForKey:@"comments"]];

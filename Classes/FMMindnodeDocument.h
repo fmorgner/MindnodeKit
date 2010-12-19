@@ -47,7 +47,4 @@
 
 @property(nonatomic, assign) NSInteger version;
 
-@property(nonatomic, assign) id delegate; 
-
-
 @end
