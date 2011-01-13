@@ -13,12 +13,13 @@
 	{
 	NSArray* subnodes;
 
-	NSString* location;
 	NSString* nodeID;
 	NSString* fillColor;
 	NSString* strokeColor;
 	
 	FMMindnodeTitle* title;
+
+	NSPoint location;
 	
 	NSInteger strokeStyle;
 	NSInteger strokeWidth;
@@ -36,12 +37,13 @@
 
 @property(nonatomic, retain) NSArray* subnodes;
 	
-@property(nonatomic, retain) NSString* location;
 @property(nonatomic, retain) NSString* nodeID;
 @property(nonatomic, retain) NSString* fillColor;
 @property(nonatomic, retain) NSString* strokeColor;
 
 @property(nonatomic, retain) FMMindnodeTitle* title;
+
+@property(nonatomic, assign) NSPoint location;
 
 @property(nonatomic, assign) NSInteger strokeStyle;
 @property(nonatomic, assign) NSInteger strokeWidth;

@@ -20,7 +20,7 @@
 		{
 		self.subnodes = nil;
 		
-		self.location = nil;
+		self.location = NSMakePoint(0, 0);
 		self.nodeID = nil;
 		self.fillColor = nil;
 		self.strokeColor = nil;
@@ -59,8 +59,7 @@
 			{
 			[self setSubnodes:nil];
 			}
-		
-		[self setLocation:[theDictionary valueForKey:@"location"]];
+		[self setLocation:NSPointFromString([theDictionary valueForKey:@"location"])];
 		[self setNodeID:[theDictionary valueForKey:@"nodeID"]];
 		[self setFillColor:[theDictionary valueForKey:@"fillColor"]];
 		[self setStrokeColor:[theDictionary valueForKey:@"strokeColor"]];
@@ -74,6 +73,8 @@
 		[self setIsDecreasingBranchThickness:[[theDictionary valueForKey:@"isDecreasingBranchThickness"] boolValue]];
 		[self setIsDrawingFill:[[theDictionary valueForKey:@"isDrawingFill"] boolValue]];
 		[self setIsDrawingInverse:[[theDictionary valueForKey:@"isDrawingInverse"] boolValue]];
+		
+		
 		}
 		
 	return self;

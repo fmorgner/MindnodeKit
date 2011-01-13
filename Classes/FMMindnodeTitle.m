@@ -32,7 +32,9 @@
 		[self setConstrainedWidth:[[theDictionary valueForKey:@"constrainedWidth"] intValue]];
 		[self setShrinkToFitContent:[[theDictionary valueForKey:@"shrinkToFitContent"] intValue]];
 
-		[self setText:[NSUnarchiver unarchiveObjectWithData:[theDictionary objectForKey:@"text"]]];
+		NSData* textRTFData = [[theDictionary objectForKey:@"text"] dataUsingEncoding:NSASCIIStringEncoding];
+			
+		[self setText:[[NSTextStorage alloc] initWithRTF:textRTFData documentAttributes:nil]];
 		}
 		
 	return self;
@@ -47,6 +49,5 @@
 	{
 	return [text string];
 	}
-
 
 @end

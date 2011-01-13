@@ -40,7 +40,7 @@
 	if(self = [super init])
 		{
 		[self setAssociations:nil]; // NOT IMPLEMENTED YET!
-		[self setRootNodes:[NSArray arrayWithObject:[FMMindnodeNode nodeWithDictionary:[[theDictionary objectForKey:@"rootNodes"] objectAtIndex:0]]]];
+		[self setRootNodes:[NSArray arrayWithObject:[FMMindnodeNode nodeWithDictionary:[[theDictionary objectForKey:@"mainNodes"] objectAtIndex:0]]]];
 		[self setColor:[theDictionary objectForKey:@"color"]];
 		}
 	return self;

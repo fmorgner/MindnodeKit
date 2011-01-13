@@ -24,7 +24,9 @@
 
 	BOOL isUsingConstrainedLayout;
 
-	NSInteger version;	
+	NSInteger version;
+	
+	id delegate;
 	}
 
 - (id) initWithDictionary:(NSDictionary*)theDictionary;
@@ -47,7 +49,7 @@
 
 @property(nonatomic, assign) NSInteger version;
 
-@property(nonatomic, assign) id delegate; 
+@property(nonatomic, assign) id delegate;
 
 
 @end
