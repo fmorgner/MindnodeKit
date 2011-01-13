@@ -16,7 +16,7 @@
 
 - (id) init
 	{
-	if (self = [super init])
+	if ((self = [super init]))
 		{
 		self.subnodes = nil;
 		
@@ -41,7 +41,7 @@
 
 - (id) initWithDictionary:(NSDictionary*)theDictionary
 	{
-	if (self = [super init])
+	if ((self = [super init]))
 		{
 		
 		if([[theDictionary valueForKey:@"subnodes"] count])

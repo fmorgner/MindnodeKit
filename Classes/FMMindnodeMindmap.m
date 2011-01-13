@@ -15,7 +15,7 @@
 
 - (id) init
 	{
-	if(self = [super init])
+	if((self = [super init]))
 		{
 		self.associations = nil;
 		self.rootNodes = nil;
@@ -26,7 +26,7 @@
 
 - (id) initWithAssociations:(NSArray*)theAssociations rootNodes:(NSArray*)theRootNodes color:(NSString*)aColor
 	{
-	if(self = [super init])
+	if((self = [super init]))
 		{
 		[self setAssociations:theAssociations];
 		[self setRootNodes:theRootNodes];
@@ -37,7 +37,7 @@
 	
 - (id) initWithDictionary:(NSDictionary*)theDictionary
 	{
-	if(self = [super init])
+	if((self = [super init]))
 		{
 		[self setAssociations:nil]; // NOT IMPLEMENTED YET!
 		[self setRootNodes:[NSArray arrayWithObject:[FMMindnodeNode nodeWithDictionary:[[theDictionary objectForKey:@"mainNodes"] objectAtIndex:0]]]];
