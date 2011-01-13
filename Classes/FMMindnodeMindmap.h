@@ -16,11 +16,8 @@
 	NSString* color;
 	}
 
-- (id) initWithAssociations:(NSArray*)theAssociations rootNodes:(NSArray*)theRootNodes color:(NSString*)aColor;
-- (id) initWithDictionary:(NSDictionary*)theDictionary;
-
-+ (id) mindmapWithAssociations:(NSArray*)theAssociations rootNodes:(NSArray*)theRootNodes color:(NSString*)aColor;
-+ (id) mindmapWithDictionary:(NSDictionary*)theDictionary;
+- (id) initWithDictionary:(NSDictionary*)theDictionary version:(NSInteger)theVersion;
++ (id) mindmapWithDictionary:(NSDictionary*)theDictionary version:(NSInteger)theVersion;
 
 
 @property(nonatomic, retain) NSArray* associations;

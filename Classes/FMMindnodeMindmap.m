@@ -24,37 +24,33 @@
 	return self;
 	}
 
-- (id) initWithAssociations:(NSArray*)theAssociations rootNodes:(NSArray*)theRootNodes color:(NSString*)aColor
+- (id) initWithDictionary:(NSDictionary*)theDictionary version:(NSInteger)theVersion
 	{
 	if((self = [super init]))
 		{
-		[self setAssociations:theAssociations];
-		[self setRootNodes:theRootNodes];
-		[self setColor:aColor];
-		}
-	return self;
-	}
-	
-- (id) initWithDictionary:(NSDictionary*)theDictionary
-	{
-	if((self = [super init]))
-		{
+		
+		switch(theVersion)
+			{
+			case 3:
+				[self setRootNodes:[NSArray arrayWithObject:[FMMindnodeNode nodeWithDictionary:[[theDictionary objectForKey:@"rootNodes"] objectAtIndex:0] version:theVersion]]];
+				break;
+			case 4:
+				[self setRootNodes:[NSArray arrayWithObject:[FMMindnodeNode nodeWithDictionary:[[theDictionary objectForKey:@"mainNodes"] objectAtIndex:0] version:theVersion]]];
+				break;
+			default:
+				break;
+			}
+			
 		[self setAssociations:nil]; // NOT IMPLEMENTED YET!
-		[self setRootNodes:[NSArray arrayWithObject:[FMMindnodeNode nodeWithDictionary:[[theDictionary objectForKey:@"mainNodes"] objectAtIndex:0]]]];
 		[self setColor:[theDictionary objectForKey:@"color"]];
 		}
 	return self;
 	
 	}
 	
-+ (id) mindmapWithDictionary:(NSDictionary*)theDictionary
++ (id) mindmapWithDictionary:(NSDictionary*)theDictionary version:(NSInteger)theVersion
 	{
 	return [[[FMMindnodeMindmap alloc] initWithDictionary:theDictionary] autorelease];
-	}
-
-+ (id) mindmapWithAssociations:(NSArray*)theAssociations rootNodes:(NSArray*)theRootNodes color:(NSString*)aColor
-	{
-	return [[[FMMindnodeMindmap alloc] initWithAssociations:theAssociations rootNodes:theRootNodes color:aColor] autorelease];
 	}
 
 - (void) dealloc

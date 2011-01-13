@@ -30,9 +30,9 @@
 	BOOL isDrawingInverse;
 	}
 
-- (id) initWithDictionary:(NSDictionary*)theDictionary;
+- (id) initWithDictionary:(NSDictionary*)theDictionary version:(NSInteger)theVersion;
 
-+ (id) nodeWithDictionary:(NSDictionary*)theDictionary;
++ (id) nodeWithDictionary:(NSDictionary*)theDictionary version:(NSInteger)theVersion;
 
 
 @property(nonatomic, retain) NSArray* subnodes;

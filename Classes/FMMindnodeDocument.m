@@ -14,7 +14,7 @@
 
 @implementation FMMindnodeDocument
 
-@synthesize author, comments, keywords, title, mindMap, printInfo, windowConfig, isUsingConstrainedLayout, version;
+@synthesize author, comments, keywords, title, mindMap, printInfo, windowConfig, isUsingConstrainedLayout, version, delegate;
 
 - (id) init
 	{
@@ -47,7 +47,7 @@
 		[self setKeywords:[theDictionary valueForKey:@"keywords"]];
 		[self setTitle:[theDictionary valueForKey:@"title"]];
 		
-		[self setMindMap:[FMMindnodeMindmap mindmapWithDictionary:[theDictionary objectForKey:@"mindMap"]]];
+		[self setMindMap:[FMMindnodeMindmap mindmapWithDictionary:[theDictionary objectForKey:@"mindMap"] version:version]];
 		
 		[self setPrintInfo:[NSUnarchiver unarchiveObjectWithData:[theDictionary objectForKey:@"printInfo"]]];
 		

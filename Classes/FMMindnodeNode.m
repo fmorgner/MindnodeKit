@@ -39,7 +39,7 @@
 	return self;
 	}
 
-- (id) initWithDictionary:(NSDictionary*)theDictionary
+- (id) initWithDictionary:(NSDictionary*)theDictionary version:(NSInteger)theVersion
 	{
 	if ((self = [super init]))
 		{
@@ -50,7 +50,7 @@
 		
 			for(NSDictionary* nodeDictionary in [theDictionary valueForKey:@"subnodes"])
 				{
-				FMMindnodeNode* node = [FMMindnodeNode nodeWithDictionary:nodeDictionary];
+				FMMindnodeNode* node = [FMMindnodeNode nodeWithDictionary:nodeDictionary version:theVersion];
 				[tempSubnodes addObject:node];
 				}
 			[self setSubnodes:[tempSubnodes copy]];
@@ -59,12 +59,13 @@
 			{
 			[self setSubnodes:nil];
 			}
+			
 		[self setLocation:NSPointFromString([theDictionary valueForKey:@"location"])];
 		[self setNodeID:[theDictionary valueForKey:@"nodeID"]];
 		[self setFillColor:[theDictionary valueForKey:@"fillColor"]];
 		[self setStrokeColor:[theDictionary valueForKey:@"strokeColor"]];
 		
-		[self setTitle:[FMMindnodeTitle titleWithDictionary:[theDictionary valueForKey:@"title"]]];
+		[self setTitle:[FMMindnodeTitle titleWithDictionary:[theDictionary valueForKey:@"title"] version:theVersion]];
 		
 		[self setStrokeStyle:[[theDictionary valueForKey:@"strokeStyle"] intValue]];
 		[self setStrokeWidth:[[theDictionary valueForKey:@"strokeWidth"] intValue]];
@@ -80,9 +81,9 @@
 	return self;
 	}
 
-+ (id) nodeWithDictionary:(NSDictionary*)theDictionary
++ (id) nodeWithDictionary:(NSDictionary*)theDictionary version:(NSInteger)theVersion
 	{
-	return [[[FMMindnodeNode alloc] initWithDictionary:theDictionary] autorelease];
+	return [[[FMMindnodeNode alloc] initWithDictionary:theDictionary version:theVersion] autorelease];
 	}
 
 @end

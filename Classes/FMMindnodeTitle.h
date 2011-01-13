@@ -17,9 +17,9 @@
 	NSAttributedString* text;
 	}
 
-- (id) initWithDictionary:(NSDictionary*)theDictionary;
+- (id) initWithDictionary:(NSDictionary*)theDictionary version:(NSInteger)theVersion;
 
-+ (id) titleWithDictionary:(NSDictionary*)theDictionary;
++ (id) titleWithDictionary:(NSDictionary*)theDictionary version:(NSInteger)theVersion;
 
 - (NSString*)stringValue;
 
