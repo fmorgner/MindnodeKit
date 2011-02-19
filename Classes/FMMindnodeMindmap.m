@@ -50,7 +50,7 @@
 	
 + (id) mindmapWithDictionary:(NSDictionary*)theDictionary version:(NSInteger)theVersion
 	{
-	return [[[FMMindnodeMindmap alloc] initWithDictionary:theDictionary] autorelease];
+	return [[[FMMindnodeMindmap alloc] initWithDictionary:theDictionary version:theVersion] autorelease];
 	}
 
 - (void) dealloc

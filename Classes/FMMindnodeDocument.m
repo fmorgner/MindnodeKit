@@ -46,16 +46,12 @@
 		[self setComments:[theDictionary valueForKey:@"comments"]];
 		[self setKeywords:[theDictionary valueForKey:@"keywords"]];
 		[self setTitle:[theDictionary valueForKey:@"title"]];
-		
-		[self setMindMap:[FMMindnodeMindmap mindmapWithDictionary:[theDictionary objectForKey:@"mindMap"] version:version]];
-		
+		[self setVersion:[[theDictionary valueForKey:@"version"] intValue]];
 		[self setPrintInfo:[NSUnarchiver unarchiveObjectWithData:[theDictionary objectForKey:@"printInfo"]]];
-		
 		[self setWindowConfig:[theDictionary objectForKey:@"windowConfig"]];
-		
 		[self setIsUsingConstrainedLayout: [[theDictionary valueForKey:@"isUsingConstrainedLayout"] boolValue]];
 		
-		[self setVersion:[[theDictionary valueForKey:@"version"] intValue]];
+		[self setMindMap:[FMMindnodeMindmap mindmapWithDictionary:[theDictionary objectForKey:@"mindMap"] version:version]];
 		}
 	return self;
 	}
